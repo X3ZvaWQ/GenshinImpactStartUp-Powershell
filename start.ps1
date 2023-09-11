@@ -28,7 +28,6 @@ function CheckScreenBrightness {
     $graphics = [System.Drawing.Graphics]::FromImage($bmp)
     $rect = [System.Drawing.Rectangle]::FromLTRB(0, 0, $screenWidth, $screenHeight)
     $graphics.CopyFromScreen($rect.Location, [System.Drawing.Point]::Empty, $rect.Size)
-    $bmp.Save("screenshot.png", [System.Drawing.Imaging.ImageFormat]::Png)
 
     $totalPixels = 0
     $brightPixels = 0
